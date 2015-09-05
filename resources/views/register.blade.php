@@ -15,12 +15,16 @@
         <input type="text" name="lastname">
             <br>
             <br>
+            Email:<br>
+        <input type="text" name="email">
+            <br>
+            <br>
             Password:<br>
         <input type="password" name="password">
             <br>
             <br>
             Street Number:<br>
-        <input type="text" name="streetnumber">
+        <input type="text" name="streetnum">
             <br>
             <br>
             Street Name:<br>

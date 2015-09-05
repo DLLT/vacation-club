@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use DB;
+use App\User;
 
 class RegisterController extends Controller {
 
@@ -17,11 +18,15 @@ class RegisterController extends Controller {
 
     public function createUser(Request $request)
     {
-        $input = $request->all();
- 
+        $user = new User;
 
-        return $input;
-        
+        $user->email = $request->email;
+        $user->password = $request->password;
+
+        $user->save();        
+
+    
+        return $user;
     }
 }
 
