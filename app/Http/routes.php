@@ -18,3 +18,5 @@ Route::get('/register', 'RegisterController@getHome');
 Route::post('/register', 'RegisterController@createUser');
 
 Route::get('/login', 'LoginController@getHome');
+
+Route::post('/login', 'LoginController@loginUser');

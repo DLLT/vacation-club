@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller {
 	
@@ -10,4 +11,13 @@ class LoginController extends Controller {
 	{
 		return view("login");
 	}
+
+	public function loginUser(Request $request)
+	{
+		$email = $request->input('email');
+		$password = $request->input('password');
+		
+		return "Email= $email and Password = $password";
+	}
+
 }
