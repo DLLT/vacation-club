@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 
 class RegisterController extends Controller {
@@ -12,6 +13,15 @@ class RegisterController extends Controller {
 
         return view('register'); 
     
+    }
+
+    public function createUser(Request $request)
+    {
+        $input = $request->all();
+ 
+
+        return $input;
+        
     }
 }
 

@@ -15,4 +15,6 @@ Route::get('/', 'HomeController@getHome');
 
 Route::get('/register', 'RegisterController@getHome');
 
+Route::post('/register', 'RegisterController@createUser');
+
 Route::get('/login', 'LoginController@getHome');
