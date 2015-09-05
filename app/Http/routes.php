@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    return 'Moo';
+    
 });
+
+
+Route::get('/register', 'RegisterController@getHome');
