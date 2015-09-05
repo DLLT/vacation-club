@@ -19,7 +19,15 @@ class LoginController extends Controller {
 		$password = $request->input('password');
 		
 		$result = DB::select("SELECT email, password FROM user WHERE email = ? AND password = ?", [$email, $password]);
-		return $result;
+
+		if($result == [])
+        {
+        	return view("login_fail");
+        }
+        else
+        {
+        	return "Login Success!";
+        }
 	}
 
 }
