@@ -11,11 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-
-    return 'Moo';
-    
-});
-
+Route::get('/', 'HomeController@getHome');
 
 Route::get('/register', 'RegisterController@getHome');
