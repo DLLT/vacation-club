@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use DB;
 
 class LoginController extends Controller {
 	
@@ -17,7 +18,8 @@ class LoginController extends Controller {
 		$email = $request->input('email');
 		$password = $request->input('password');
 		
-		return "Email= $email and Password = $password";
+		$result = DB::select("SELECT email, password FROM user WHERE email = ? AND password = ?", [$email, $password]);
+		return $result;
 	}
 
 }
