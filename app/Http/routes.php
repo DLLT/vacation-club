@@ -14,3 +14,5 @@
 Route::get('/', 'HomeController@getHome');
 
 Route::get('/register', 'RegisterController@getHome');
+
+Route::get('/login', 'LoginController@getHome');
