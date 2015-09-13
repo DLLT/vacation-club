@@ -2,5 +2,5 @@
 
 @section('content')
     <p>Login Failed!</p>
-    <a href="/login"><p>Try again</p></a>
+    <a href="./login"><p>Try again</p></a>
 @endsection

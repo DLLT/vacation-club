@@ -5,5 +5,5 @@
 @section('content')
     <h1>Register Succeess</h1>
 
-        <a href="/login">Procced to Login Page here</a>
+        <a href="./login">Procced to Login Page here</a>
 @endsection
