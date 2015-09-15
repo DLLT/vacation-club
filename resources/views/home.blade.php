@@ -9,11 +9,11 @@
 
     @if ( $user ) 
         <p>You are logged in with email:{{ $user->email }}</p>
-        <a href="./logout">Logout</a>
+        <a href="/logout">Logout</a>
 
     @else 
-        <a href="./register">Register</a>    
-        <a href="./login">Login</a>
+        <a href="/register">Register</a>    
+        <a href="/login">Login</a>
     @endif 
     
 
