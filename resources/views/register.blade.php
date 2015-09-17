@@ -1,9 +1,13 @@
 @extends('layouts.master')
 
-@section('title', 'register')
+@section('title', 'Register')
+@endsection
+
+@section('page_head')
+    New User Registraion
+@endsection
 
 @section('content')
-    <h1> User Registration</h1>
     
     <form method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -46,4 +50,4 @@
         <input type="submit" value="submit">
     </form>
 
-@endsction
+@endsection

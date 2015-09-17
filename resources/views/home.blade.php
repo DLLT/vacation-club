@@ -2,25 +2,19 @@
 
 @section('title', 'Home')
 
-@section('main_nav')
-    <h1>Vacation Hotel Exchange Club</h1>
-    <p>Navigation bar main</p>
+@section('page_title', 'Welcome to the Club')
 
-
-    @if ( $user ) 
-        <p>You are logged in with email:{{ $user->email }}</p>
-        <a href="/logout">Logout</a>
-
-    @else 
-        <a href="/register">Register</a>    
-        <a href="/login">Login</a>
-    @endif 
-    
+@section('top_content')
+    <p>The Vacation House Exchange Club welcomes you to register for access to our club
+       and enjoy the wonderful member benefits
+    </p> 
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
 
 @endsection
 
-@section('content')
-    <p>This is my body content.</p>
+@section('bottom_content')
+
+
 @endsection
 
 

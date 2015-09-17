@@ -10,9 +10,11 @@ use DB;
 
 class LoginController extends Controller {
 	
-	public function getHome()
-	{
-		return view("login");
+	public function getHome(Request $request)
+        {
+            $user = $request->session()->get('user');
+
+	    return view('login', ['user' => $user]);
 	}
 
 	public function loginUser(Request $request)

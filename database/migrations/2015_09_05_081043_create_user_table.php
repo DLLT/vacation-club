@@ -16,7 +16,15 @@ class CreateUserTable extends Migration
             $table->increments('id');
             $table->string('email');
             $table->string('password');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('streetnum');
+            $table->string('streetname');
+            $table->string('suburb');
+            $table->string('postcode');
+            $table->string('phone');
             $table->timestamps();
+            
         });
     }
 

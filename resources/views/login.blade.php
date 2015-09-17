@@ -1,5 +1,12 @@
 @extends('layouts.master')
 
+@section('title', 'Login')
+@endsection
+
+@section('page_head')
+    User Login 
+@endsection
+
 @section('content')
 	<form action="/login" method="post">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}"> 
@@ -11,7 +18,5 @@
 	<br>
 	<input type="submit" value="submit" value="Submit">
 	</form>
-
-
 
 @endsection
