@@ -35,12 +35,13 @@
             <p>Logged in as: {{ $user->email }}</p>
           
           @else
-            <form class="navbar-form navbar-right" action="/register">
-              <button action="/register" type="submit" class="btn btn-success">Register</button>
+            <form class="navbar-form navbar-right" action="./register">
+              <button action="register" type="submit" class="btn btn-success">Register</button>
             </form>
    
-            <form class="navbar-form navbar-right">
+            <form class="navbar-form navbar-right" method="POST" action="./login">
               <div class="form-group">
+			  <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="text" placeholder="Email" class="form-control">
               </div>
               <div class="form-group">
