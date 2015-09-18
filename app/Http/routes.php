@@ -25,12 +25,12 @@ Route::post('/login', 'LoginController@loginUser');
 
 Route::get('/logout', 'LoginController@logoutUser');
 
-<<<<<<< HEAD
 Route::get('/about', 'AboutController@getHome');
-=======
+
 Route::get('/register_house', 'HouseController@getHouse');
 
 Route::Post('/register_house', 'HouseController@createHouse');
 
-Route::get('/register_house/success','HouseController@getSuccess'); 
->>>>>>> 5dcb610979288d9b16795e9c8a34c76068aced41
+Route::get('/register_house/success','HouseController@getSuccess');
+
+Route::get('/contact','ContactController@getHome');
