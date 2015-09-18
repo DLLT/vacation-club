@@ -1,19 +1,22 @@
 @extends('layouts.master')
 
 @section('title', 'Register Success')
-@endsection
 
-@section('page_head')
-    New User Registration
-@endsection
+@section('page_title', 'Registation Successful.')
 
-@section('content')
+@section('top_content')
     <p>The user has been registered successfully with the following details:</p>
-    <ul>
-        <li>Name: </li>
+            @if ( $user )
+              <h3>  Name: {{ $user->email }} </h3>
+            @endif                
+        </li>
     </ul>
 
 
     <a href="/login">Procced to Login Page here</a>
+    
+@endsection
+
+@section('bottom_content')
     
 @endsection

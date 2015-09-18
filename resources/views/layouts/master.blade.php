@@ -28,30 +28,42 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Vacation House Exchange Club</a>
+          <a class="navbar-brand" href="/">Vacation House Exchange Club</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+          <!--check if user logged in and display bar accordingly -->
           @if ( $user )
-            <p>Logged in as: {{ $user->email }}</p>
-          
+            <div class="navbar-header navbar-right" style="color: white">
+              <h4>Logged in as: {{ $user->email }}</h4>
+            </div>
           @else
             <form class="navbar-form navbar-right" action="/register">
               <button action="/register" type="submit" class="btn btn-success">Register</button>
             </form>
    
-            <form class="navbar-form navbar-right">
+            <form class="navbar-form navbar-right" action="/login" method="post">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
               <div class="form-group">
-                <input type="text" placeholder="Email" class="form-control">
+                <input type="text" placeholder="Email" class="form-control" name="email">
               </div>
               <div class="form-group">
-                <input type="password" placeholder="Password" class="form-control">
+                <input type="password" placeholder="Password" class="form-control" name="password">
               </div>
-              <button type="submit" class="btn btn-success">Sign in</button>
+              <button type="submit" value="submit" class="btn btn-success">Sign in</button>
             </form>
           @endif
           </div><!--/.navbar-collapse -->
         </div>
         
+        <div class="nav nav-justified"> 
+            <ul class="nav nav-justified">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/view">View Houses</a></li>
+                <li><a href="/register_house">Register Houses</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul> 
+        </div>
     </nav>
 
     <!-- Content -->
