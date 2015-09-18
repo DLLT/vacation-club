@@ -11,10 +11,11 @@ use App\House;
 
 class HouseController extends Controller {
 
-    public function getHouse() 
+    public function getHouse(Request $request) 
     {
+        $user = $request->session()->get('user');    
 
-        return view('registerHouse'); 
+        return view('register_house', ['user' => $user]); 
     
     }
 	
@@ -40,14 +41,12 @@ class HouseController extends Controller {
 		{
 			return "Failed";
 		}
-		
-     
-		
 	}
+
 
    public function getSuccess()
     {
-        return view('registerHouse_success');
+        return view('register_house_success', ['user' => $user]);
     }
 
    
