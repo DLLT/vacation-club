@@ -5,7 +5,7 @@
 @section('page_title', 'Registation Successful.')
 
 @section('top_content')
-    <p>The user has been registered successfully with the following details:</p>
+    <p>The user has been registered successfully.</p>
             @if ( $user )
               <h3>  Name: {{ $user->email }} </h3>
             @endif                
@@ -13,7 +13,6 @@
     </ul>
 
 
-    <a href="./login">Procced to Login Page here</a>
     
 @endsection
 

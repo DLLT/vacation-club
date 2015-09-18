@@ -13,9 +13,9 @@ class HomeController extends Controller {
     public function getHome(Request $request)
     {
         $user = $request->session()->get('user');
-        $name = DB::table('user')->lists('email');
+
          
             
-        return view('home', ['user' => $user, 'name'=> $name]);
+        return view('home', ['user' => $user]);
     }
 }

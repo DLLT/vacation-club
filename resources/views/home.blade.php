@@ -13,7 +13,6 @@
        and enjoy the wonderful member benefits.
       
     </p> 
-    {{ $name[0] }} 
 
     <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more &raquo;</a></p>
 @endsection

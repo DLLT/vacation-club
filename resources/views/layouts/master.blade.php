@@ -35,25 +35,26 @@
           @if ( $user )
             <div class="navbar-header navbar-right" style="color: white">
               <h4>Logged in as: {{ $user->email }}</h4>
+              <span class="icon-bar"><a href="/logout">Log-out</a></span>  
             </div>
           @else
+            <!-- Register Button -->
             <form class="navbar-form navbar-right" action="./register">
               <button action="register" type="submit" class="btn btn-success">Register</button>
             </form>
-   
+            
+            <!-- Sign in stuff -->
             <form class="navbar-form navbar-right" action="/login" method="post">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            
               <div class="form-group">
                 <input type="text" placeholder="Email" class="form-control" name="email">
-
-            <form class="navbar-form navbar-right" method="POST" action="./login">
-              <div class="form-group">
-			  <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="text" placeholder="Email" class="form-control">
               </div>
+
               <div class="form-group">
                 <input type="password" placeholder="Password" class="form-control" name="password">
               </div>
+            
               <button type="submit" value="submit" class="btn btn-success">Sign in</button>
             </form>
           @endif
