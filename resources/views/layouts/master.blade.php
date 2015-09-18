@@ -37,14 +37,21 @@
               <h4>Logged in as: {{ $user->email }}</h4>
             </div>
           @else
-            <form class="navbar-form navbar-right" action="/register">
-              <button action="/register" type="submit" class="btn btn-success">Register</button>
+            <form class="navbar-form navbar-right" action="./register">
+              <button action="register" type="submit" class="btn btn-success">Register</button>
             </form>
    
+<<<<<<< HEAD
             <form class="navbar-form navbar-right" action="/login" method="post">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
               <div class="form-group">
                 <input type="text" placeholder="Email" class="form-control" name="email">
+=======
+            <form class="navbar-form navbar-right" method="POST" action="./login">
+              <div class="form-group">
+			  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="text" placeholder="Email" class="form-control">
+>>>>>>> 5dcb610979288d9b16795e9c8a34c76068aced41
               </div>
               <div class="form-group">
                 <input type="password" placeholder="Password" class="form-control" name="password">

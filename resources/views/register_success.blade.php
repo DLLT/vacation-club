@@ -13,7 +13,7 @@
     </ul>
 
 
-    <a href="/login">Procced to Login Page here</a>
+    <a href="./login">Procced to Login Page here</a>
     
 @endsection
 

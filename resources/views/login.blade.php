@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-	<form action="/login" method="post">
+	<form action="./login" method="post">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}"> 
 	Email:<br>
 	<input type="text" name="email">
