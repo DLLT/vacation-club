@@ -25,7 +25,8 @@ Route::post('/login', 'LoginController@loginUser');
 
 Route::get('/logout', 'LoginController@logoutUser');
 
-Route::get('/registerHouse', 'HouseController@getHouse');
+Route::get('/register_house', 'HouseController@getHouse');
 
-Route::Post('/registerHouse', 'HouseController@createHouse');
-Route::get('/registerHouse/success','HouseController@getSuccess'); 
+Route::Post('/register_house', 'HouseController@createHouse');
+
+Route::get('/register_house/success','HouseController@getSuccess'); 

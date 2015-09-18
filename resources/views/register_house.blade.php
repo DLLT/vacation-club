@@ -32,11 +32,15 @@
         <input type="text" name="noRooms">
             <br>
             <br>
-            Airconditioning/Heating:<br>
+            Airconditioning:<br>
         <input type="text" name="airCon">
             <br>
             <br>
-            Swimming Pool: <br>
+            Heating:<br>
+		<input type="text" name="heating">
+			<br>
+			<br>
+            Swimming Pool:<br>
         <input type="text" name="swimming"> 
             <br>
             <br>
@@ -48,6 +52,10 @@
         <input type="text" name="discounts"> 
             <br>
             <br>
+            Upload Image:
+        <input type="file" name="image">
+        	<br>
+        	<br>
         <input type="submit" value="submit">
     </form>
 
