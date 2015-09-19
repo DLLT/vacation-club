@@ -24,7 +24,7 @@ class RegisterController extends Controller {
         $user = $request->session()->get('user');      
                
        
-        return view('register_success', ['user' => $user]);        
+        return view('/register_success', ['user' => $user]);        
     }      
        
     public function createUser(Request $request)       
@@ -43,7 +43,7 @@ class RegisterController extends Controller {
                
         if ( $user->save() ) {     
                    
-            return Redirect::to('register/success');       
+            return Redirect::to('register/register_success');       
                
         } else {       
                    

@@ -17,7 +17,7 @@ Route::get('/register', 'RegisterController@getHome');
 
 Route::post('/register', 'RegisterController@createUser');
 
-Route::get('/register/success','RegisterController@getSuccess');
+Route::get('/register/register_success','RegisterController@getSuccess');
 
 Route::get('/login', 'LoginController@getHome');
 
@@ -27,10 +27,13 @@ Route::get('/logout', 'LoginController@logoutUser');
 
 Route::get('/about', 'AboutController@getHome');
 
-Route::get('/register_house', 'HouseController@getHouse');
+Route::get('/house', 'HouseController@getHome');
 
-Route::Post('/register_house', 'HouseController@createHouse');
+Route::get('/house/house_register', 'HouseController@getHouseRegister');
 
-Route::get('/register_house/success','HouseController@getSuccess');
+Route::post('house/house_register', 'HouseController@createHouse');
 
-Route::get('/contact','ContactController@getHome');
+Route::get('/house/house_register/house_register_success', 'HouseController@getSuccess');
+
+Route::get('/contact', 'ContactController@getHome');
+

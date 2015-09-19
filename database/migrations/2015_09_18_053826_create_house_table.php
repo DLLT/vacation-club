@@ -13,18 +13,20 @@ class CreateHouseTable extends Migration
     public function up()
     {
     	Schema::create('house', function (Blueprint $table) {
-			$table->increments('id');
-			$table->string('userID');
-			$table->string('city');
-			$table->string('distToCity');
-			$table->string('availTrains');
-			$table->string('noRooms');
-			$table->string('airCon');
+                        $table->increments('id');
+                        // Foreign key
+                        $table->string('city');
+			$table->string('suburb');
+			$table->string('distcity');
+			$table->string('transport');
+			$table->string('numrooms');
+			$table->string('aircon');
 			$table->string('heating');
-			$table->string('swimming');
-			$table->string('pointsNeeded');
-			$table->string('discounts');
-			$table->string('image');
+			$table->string('swimmingpool');
+			$table->string('points');
+			$table->string('discount');
+                        $table->string('image');
+                        $table->timestamps();
     	});
     }
 
