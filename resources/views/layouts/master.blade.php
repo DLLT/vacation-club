@@ -19,10 +19,11 @@
   </head>
   <body>
  
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <nav class="navbar transparent navbar-inverse">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -71,8 +72,10 @@
         </div>
      </nav>
     <!-- Content -->
-    <div class="jumbotron">
-      <div class="container" style="padding-top: 50px;">
+    <div class="container"> 
+    <div class="jumbotron myBackground">
+    <h1 class="whitney">
+    <div class="container" style="padding-top: 50px;">
         <h1>
             <!-- Page title -->
             @yield('page_title')
@@ -81,7 +84,9 @@
         @section('top_content')
         
         @show
-      </div>
+    </div>
+    </h1>
+    </div>
     </div>
 
     <div class="container">
@@ -105,4 +110,53 @@
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
  </body>
 </html>
-
+<style>
+.navbar-inverse
+    {
+      background-color: rgba(34, 34, 34, 0.5);
+      border-bottom: none;
+     }
+.navbar-header #brand
+    {
+      font-family: 'FuturaBook', Arial, sans-serif;
+      color: white;
+      font-size: 20pt;
+      margin-top: 20px;
+      text-transform: uppercase;
+     }
+.mynav li 
+    {
+      ist-style: none;
+      display: inline-block;
+      border-left: 1px solid white;
+      padding-top: 36px;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 90px;
+     }
+.mynav li:last-child
+    {
+      border-right: 1px solid white;
+     } 
+.mynav li a
+    {
+      color:white;
+     }
+.mynav li a:hover
+    {
+      text-decoration: none;
+    }
+body 
+    {
+      background: url(img/03.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+.myBackground 
+    {
+      background-color: rgba(255,255,255, 0.5);
+      color: inherit;
+    }
+</style>
