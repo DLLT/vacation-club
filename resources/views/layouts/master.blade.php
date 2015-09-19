@@ -41,7 +41,7 @@
           @else
             <!-- Register Button -->
             <form class="navbar-form navbar-right" action="./register">
-              <button action="register" type="submit" class="btn btn-success">Register</button>
+              <button action="register" type="submit" class="btn btn-info">Register</button>
             </form>
             
             <!-- Sign in stuff -->
@@ -56,7 +56,7 @@
                 <input type="password" placeholder="Password" class="form-control" name="password">
               </div>
             
-              <button type="submit" value="submit" class="btn btn-success">Sign in</button>
+              <button type="submit" value="submit" class="btn btn-info">Sign in</button>
             </form>
           @endif
           </div><!--/.navbar-collapse -->
