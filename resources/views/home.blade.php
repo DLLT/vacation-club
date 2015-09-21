@@ -27,8 +27,8 @@
         <div class="thumbnail">
         <img src="/img/01.jpg" alt="Sample Image">
         <div class="caption">
-          <h2>House 1</h2>
-          <p>Lets put description and image of house from database here!</p>
+          <h2>Summer Breeze Package</h2>
+          <p>Enjoy the summer breeze</p>
           <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
         </div>
         </div>
@@ -37,8 +37,8 @@
         <div class="thumbnail">
         <img src="/img/15.jpg" alt="Sample Image">
         <div class="caption">
-          <h2>House 2</h2>
-          <p>Lets put description and image of house from database here!</p>
+          <h2>Laylow Package</h2>
+          <p>Lay low get loose</p>
           <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
        </div>
        </div>
@@ -47,8 +47,8 @@
         <div class="thumbnail">
         <img src="/img/22.jpg" alt="Sample Image">
         <div class="caption">
-          <h2>House 3</h2>
-          <p>Lets put description and image of house from database here!</p>
+          <h2>You Want This Package</h2>
+          <p>Man you already know</p>
           <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
         </div>
         </div>
