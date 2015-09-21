@@ -7,4 +7,4 @@ php:
 install: 
     - sudo composer self-update
     
-    
+script: nosetests    
