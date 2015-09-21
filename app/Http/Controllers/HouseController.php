@@ -16,8 +16,13 @@ class HouseController extends Controller {
     public function getHome(Request $request) 
     {
         $user = $request->session()->get('user');    
+        $houses = DB::table('house')->lists('image');
 
-        return view('house', ['user' => $user]); 
+        foreach ($houses as $house) {
+            $house = $house; 
+        }
+
+        return view('house', ['user' => $user, 'house' => $house]); 
     
     }
 

@@ -9,7 +9,9 @@
 
     <!-- Bootstrap -->
     <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
-
+    <link href="{{ URL::asset('css/main.css') }}" rel="stylesheet">
+    
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -41,7 +43,7 @@
           @else
             <!-- Register Button -->
             <form class="navbar-form navbar-right" action="./register">
-              <button action="register" type="submit" class="btn btn-info">Register</button>
+              <button action="register" type="submit" class="btn btn-info">Register new user</button>
             </form>
             
             <!-- Sign in stuff -->
@@ -75,16 +77,20 @@
     <div class="container"> 
     <div class="jumbotron myBackground">
     <h1 class="whitney">
+
     <div class="container" style="padding-top: 50px;">
+
         <h1>
             <!-- Page title -->
             @yield('page_title')
         </h1>
+
         <!-- Top Content -->
         @section('top_content')
         
         @show
     </div>
+
     </h1>
     </div>
     </div>
@@ -110,53 +116,3 @@
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
  </body>
 </html>
-<style>
-.navbar-inverse
-    {
-      background-color: rgba(34, 34, 34, 0.5);
-      border-bottom: none;
-     }
-.navbar-header #brand
-    {
-      font-family: 'FuturaBook', Arial, sans-serif;
-      color: white;
-      font-size: 20pt;
-      margin-top: 20px;
-      text-transform: uppercase;
-     }
-.mynav li 
-    {
-      ist-style: none;
-      display: inline-block;
-      border-left: 1px solid white;
-      padding-top: 36px;
-      padding-left: 10px;
-      padding-right: 10px;
-      height: 90px;
-     }
-.mynav li:last-child
-    {
-      border-right: 1px solid white;
-     } 
-.mynav li a
-    {
-      color:white;
-     }
-.mynav li a:hover
-    {
-      text-decoration: none;
-    }
-body 
-    {
-      background: url(img/03.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-.myBackground 
-    {
-      background-color: rgba(255,255,255, 0.5);
-      color: inherit;
-    }
-</style>

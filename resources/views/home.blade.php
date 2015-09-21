@@ -22,40 +22,37 @@
 @section('bottom_content')
 
 <!-- Example row of columns -->
-       <div class="row">
+    <div class="row">
         <div class="col-md-4">
-        <div class="thumbnail">
-        <img src="/img/01.jpg" alt="Sample Image">
-        <div class="caption">
-          <h2>Summer Breeze Package</h2>
-          <p>Enjoy the summer breeze</p>
-          <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        </div>
+            <div class="thumbnail">
+                <img src="/img/01.jpg" alt="Sample Image">
+                <div class="caption">
+                    <h2>Summer Breeze</h2>
+                    <p>Enjoy the summer breeze.</p>
+                    <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
         </div>
         <div class="col-md-4">
-        <div class="thumbnail">
-        <img src="/img/15.jpg" alt="Sample Image">
-        <div class="caption">
-          <h2>Laylow Package</h2>
-          <p>Lay low get loose</p>
-          <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-       </div>
-       </div>
-       </div>
+            <div class="thumbnail">
+                <img src="/img/15.jpg" alt="Sample Image">
+                <div class="caption">
+                    <h2>Laylow Lagoon</h2>
+                    <p>Lay low get loose.</p>
+                    <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
+        </div>
         <div class="col-md-4">
-        <div class="thumbnail">
-        <img src="/img/22.jpg" alt="Sample Image">
-        <div class="caption">
-          <h2>You Want This Package</h2>
-          <p>Man you already know</p>
-          <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
+            <div class="thumbnail">
+                <img src="/img/22.jpg" alt="Sample Image">
+                <div class="caption">
+                    <h2>Oasis Heaven</h2>
+                    <p>Nice play with massive pool.</p>
+                    <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
-        </div>
+    </div>
 
 @endsection
-
-
-
