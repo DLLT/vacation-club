@@ -29,6 +29,7 @@
  
 <!-- Example row of columns -->
 
+
        <div class="row">
 	   @foreach ($houses as $house)
 	   
@@ -45,9 +46,8 @@
         </div>
         </div>
 		@endforeach
+		</div>
+
 
 
 @endsection
-
-
-
