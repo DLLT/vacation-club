@@ -1,0 +1,53 @@
+.navbar-inverse
+{   
+    background-color: rgba(34, 34, 34, 0.5);
+    border-bottom: none;
+}
+.navbar-header #brand
+{
+    font-family: 'FuturaBook', Arial, sans-serif;
+    color: white;
+    font-size: 20pt;    124       margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.mynav li
+{
+    list-style: none;
+    display: inline-block;
+    border-left: 1px solid white;
+    padding-top: 36px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 90px;
+}
+
+.mynav li:last-child
+{
+    border-right: 1px solid white;
+}
+
+.mynav li a
+{
+    color:white;
+}
+
+.mynav li a:hover
+{
+    text-decoration: none;
+}
+
+body
+{
+    background: url('/img/03.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.myBackground
+{
+    background-color: rgba(255,255,255, 0.5);
+    color: inherit;
+}

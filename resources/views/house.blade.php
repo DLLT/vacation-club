@@ -6,7 +6,7 @@
 
 @section('top_content')
     <p>View our wonderful range of homes or register your home.</p>
-    <p><a href="/house/house_register">Register a new home here</a></p>    
+    <p><a href="./house/house_register">Register a new home here</a></p>    
 @endsection
 
 @section('bottom_content')

@@ -14,46 +14,38 @@
       
     </p> 
 
-    <p><a class="btn btn-info btn-lg" href="/about" role="button">Learn more &raquo;</a></p>
+    <p><a class="btn btn-info btn-lg" href="./about" role="button">Learn more &raquo;</a></p>
 @endsection
 
 
 <!-- put bottom content here -->
 @section('bottom_content')
 
+
+
+
+	
+
+ 
 <!-- Example row of columns -->
+
        <div class="row">
+	   @foreach ($houses as $house)
+	   
         <div class="col-md-4">
         <div class="thumbnail">
-        <img src="/img/01.jpg" alt="Sample Image">
+        <img src="{{$house->image}}" alt="Sample Image">
         <div class="caption">
-          <h2>House 1</h2>
-          <p>Lets put description and image of house from database here!</p>
+          <h2>{{$house->city }} {{$house->suburb}}</h2>
+          <p>Distance to the city:  {{$house->distcity }}
+		  Available Transport: {{$house->transport}} 
+		  Number of rooms: {{$house->numrooms}}</p>
           <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
         </div>
         </div>
         </div>
-        <div class="col-md-4">
-        <div class="thumbnail">
-        <img src="/img/15.jpg" alt="Sample Image">
-        <div class="caption">
-          <h2>House 2</h2>
-          <p>Lets put description and image of house from database here!</p>
-          <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-       </div>
-       </div>
-       </div>
-        <div class="col-md-4">
-        <div class="thumbnail">
-        <img src="/img/22.jpg" alt="Sample Image">
-        <div class="caption">
-          <h2>House 3</h2>
-          <p>Lets put description and image of house from database here!</p>
-          <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        </div>
-        </div>
-        </div>
+		@endforeach
+
 
 @endsection
 

@@ -39,7 +39,8 @@ class RegisterController extends Controller {
         $user->streetname = $request->streetname;      
         $user->suburb = $request->suburb;      
         $user->postcode = $request->postcode;      
-        $user->phone = $request->phone;            
+        $user->phone = $request->phone;
+		$user->points = 500;		
                
         if ( $user->save() ) {     
                    

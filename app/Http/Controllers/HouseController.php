@@ -34,15 +34,18 @@ class HouseController extends Controller {
     public function getSuccess(Request $request)
     {
         $user = $request->session()->get('user');
-
+		
         return view('/house_register_success', ['user' => $user]);
         
     }
 
     public function createHouse(Request $request)
     {
+		$user = $request->session()->get('user');
         $house = new House;
- 
+	
+		$house->userId = $user->id;
+			
         $house->city = $request->city;
         $house->suburb = $request->suburb;
         $house->distcity = $request->distcity;
