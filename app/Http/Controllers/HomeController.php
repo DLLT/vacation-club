@@ -16,16 +16,21 @@ class HomeController extends Controller {
     {
         $user = $request->session()->get('user');
 		            
+					if($user)
+					{
+						$houses = DB::select(
+						"SELECT * FROM house WHERE points < ? AND userId != ?",
+						[$user->points, $user->id]);
+					}
+					else
+					{
+						$houses = DB::select(
+						"SELECT * FROM house");
+					}
 					
-					$houses = DB::select(
-                "SELECT * FROM house");
-                
-            if($houses == [])
-            {   
-				return view('home', ['user' => $user])
-			}
+            
 			
 			  
-        return view('home', ['user' => $user], compact('houses'));
+			return view('home', ['user' => $user], compact('houses'));
     }
 }

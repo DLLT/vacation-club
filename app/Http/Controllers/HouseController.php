@@ -16,14 +16,20 @@ class HouseController extends Controller {
     public function getHome(Request $request) 
     {
         $user = $request->session()->get('user');    
-        $houses = DB::table('house')->lists('image');
-
-        foreach ($houses as $house) {
-            $house = $house; 
-        }
-
-        return view('house', ['user' => $user, 'house' => $house]); 
-    
+        
+		if($user)
+		{
+		$houses = DB::select(
+			"SELECT * FROM house WHERE points < ? AND userId != ?",
+			[$user->points, $user->id]);
+		}
+		else
+		{
+			$houses = DB::select(
+			"SELECT * FROM house");
+		}
+      
+		return view('house', ['user' => $user], compact('houses'));
     }
 
 
@@ -71,5 +77,47 @@ class HouseController extends Controller {
             return "Failed";
         }
     }
-
+	
+	public function displayDetails(Request $request)
+	{
+		$user = $request->session()->get('user');
+		//return "Displaying details";
+		//return $request->id;
+		$houses = DB::select("SELECT * FROM house WHERE id = ?",
+			[$request->id]);
+		return view('house_details', ['user' => $user], compact('houses'));
+		
+	}
+	
+	public function getUserHouse(Request $request)
+	{
+		        $user = $request->session()->get('user');
+			$houses = DB::select("SELECT * FROM house WHERE userId = ?",
+			[$user->id]);
+		return view('user_houses', ['user' => $user], compact('houses'));
+	}
+	
+	public function displayHouses(Request $request)
+	{
+		        $user = $request->session()->get('user');
+			$houses = DB::select("SELECT * FROM house WHERE userId = ?",
+			[$user->id]);
+		return view('user_houses', ['user' => $user], compact('houses'));
+	}
+	
+	public function displayLetHouses(Request $request)
+	{
+		//return "testing";
+		$user = $request->session()->get('user');
+			//$houses = DB::select("SELECT *  FROM let JOIN house WHERE let.houseId = house.id");
+		
+		$houses = DB::table('house')
+			->join('let', 'let.houseId', '=', 'house.id')
+			->select('let.id', 'let.startDate', 'let.endDate', 'house.city', 'house.suburb')
+			->get();
+			//->select('let.id', 'let.startDate', 'let.end)
+		
+		return view('view_houses', ['user' => $user], compact('houses'));	
+		//return view('view_houses', ['user' => $user]);	
+		}
 }
