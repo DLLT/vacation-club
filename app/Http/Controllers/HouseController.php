@@ -111,6 +111,7 @@ class HouseController extends Controller {
 		$user = $request->session()->get('user');
 			//$houses = DB::select("SELECT *  FROM let JOIN house WHERE let.houseId = house.id");
 		
+<<<<<<< HEAD
 		/**$houses = DB::table('let')
 			->leftJoin('house', function($join){
 				$join->on('let.houseId', '=', 'planet');
@@ -118,6 +119,11 @@ class HouseController extends Controller {
 			->get(array('let.id', 'let.houseId', 'let.startdate', 'let.enddate', 'let.minrate', 'house.city', 'house.suburb'));**/
 			$houses = DB::table('let')
 			->leftJoin('house', 'let.houseId', '=', 'house.id')
+=======
+		$houses = DB::table('house')
+			->join('let', 'let.houseId', '=', 'house.id')
+			->select('let.id', 'let.startDate', 'let.endDate', 'house.city', 'house.suburb')
+>>>>>>> origin/master
 			->get();
 			//->select('let.id', 'let.startDate', 'let.end)
 		

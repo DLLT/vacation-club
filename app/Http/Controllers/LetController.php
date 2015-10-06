@@ -49,6 +49,7 @@ public function getSuccess(Request $request)
         return view('/let_success', ['user' => $user]);        
     }      
 	
+<<<<<<< HEAD
 public function createOccupancy(Request $request)
 {
 		$user = $request->session()->get('user'); 
@@ -56,5 +57,7 @@ public function createOccupancy(Request $request)
 			[$request->id]);
 		
 }
+=======
+>>>>>>> origin/master
 	
 }

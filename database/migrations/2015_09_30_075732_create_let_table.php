@@ -13,7 +13,11 @@ class CreateLetTable extends Migration
     public function up()
     {
         Schema::create('let', function (Blueprint $table) {
+<<<<<<< HEAD
                         $table->increments('letId');
+=======
+                        $table->increments('id');
+>>>>>>> origin/master
                         // Foreign key
 						$table->Integer('houseId')->unsigned();
                         $table->string('startdate');

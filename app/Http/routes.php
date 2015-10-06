@@ -52,9 +52,12 @@ Route::get('/contact', 'ContactController@getHome');
 
 Route::get('/ratings', 'RatingController@getHome');
 
+<<<<<<< HEAD
 
 Route::post('/create_occupancy', 'LetController@createOccupancy');
 
+=======
+>>>>>>> origin/master
 //Route::get('house/house_details', 'HouseDetailsController@getHome');
 //Route::post('house/house_details', 'HouseDetailsController@displayDetails');
 

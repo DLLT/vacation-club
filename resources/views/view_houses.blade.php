@@ -16,6 +16,7 @@
 <div class="row">
 	   @foreach ($houses as $house)
 	   
+<<<<<<< HEAD
 	    <table>
 		<tr>
 		<td>{{$house->letId}}</td>
@@ -38,6 +39,12 @@
 		
 		
 		
+=======
+	    <h2>{{$house->id }} </h2>
+          <p>
+		  Available Transport: {{$house->startDate }} 
+		  Number of rooms: {{$house->suburb}}</p>
+>>>>>>> origin/master
 	   @endforeach
 	   </div>
 @endsection
