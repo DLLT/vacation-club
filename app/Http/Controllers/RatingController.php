@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -13,6 +14,11 @@ use App\House;
 use App\Let;
 use App\Rating;
 
+=======
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+>>>>>>> origin/master
 class RatingController extends Controller
 {
     /**
@@ -20,6 +26,7 @@ class RatingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function getHomeHouses(Request $request)
     {
         $user = $request->session()->get('user');
@@ -118,6 +125,11 @@ class RatingController extends Controller
 
         return view('/house_rating_success', ['user' => $user]);
         
+=======
+    public function getHome(Request $request)
+    {
+        $user = $request->session()->get('user');
+>>>>>>> origin/master
     }
 
 }

@@ -83,7 +83,12 @@ class HouseController extends Controller {
 	public function displayDetails(Request $request)
 	{
 		$user = $request->session()->get('user');
+<<<<<<< HEAD
 		
+=======
+		//return "Displaying details";
+		//return $request->id;
+>>>>>>> origin/master
 		$houses = DB::select("SELECT * FROM house WHERE id = ?",
 			[$request->id]);
 		return view('house_details', ['user' => $user], compact('houses'));
@@ -108,6 +113,7 @@ class HouseController extends Controller {
 	
 	public function displayLetHouses(Request $request)
 	{
+<<<<<<< HEAD
 		
 		$user = $request->session()->get('user');
 			
@@ -124,5 +130,29 @@ class HouseController extends Controller {
 		
 		return view('view_houses', ['user' => $user], compact('houses'));	
 			
+=======
+		//return "testing";
+		$user = $request->session()->get('user');
+			//$houses = DB::select("SELECT *  FROM let JOIN house WHERE let.houseId = house.id");
+		
+<<<<<<< HEAD
+		/**$houses = DB::table('let')
+			->leftJoin('house', function($join){
+				$join->on('let.houseId', '=', 'planet');
+			})
+			->get(array('let.id', 'let.houseId', 'let.startdate', 'let.enddate', 'let.minrate', 'house.city', 'house.suburb'));**/
+			$houses = DB::table('let')
+			->leftJoin('house', 'let.houseId', '=', 'house.id')
+=======
+		$houses = DB::table('house')
+			->join('let', 'let.houseId', '=', 'house.id')
+			->select('let.id', 'let.startDate', 'let.endDate', 'house.city', 'house.suburb')
+>>>>>>> origin/master
+			->get();
+			//->select('let.id', 'let.startDate', 'let.end)
+		
+		return view('view_houses', ['user' => $user], compact('houses'));	
+		//return view('view_houses', ['user' => $user]);	
+>>>>>>> origin/master
 		}
 }

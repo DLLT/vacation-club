@@ -21,6 +21,7 @@
     <p><a class="btn btn-info btn-lg" href="./user_houses" role="button">Your Houses &raquo;</a></p>
     
 	
+<<<<<<< HEAD
 	<p><a class="btn btn-info btn-lg" href="./rate_houses" role="button">Rate Houses &raquo;</a></p>
 	
 	<p><a class="btn btn-info btn-lg" href="./rate_users" role="button">Rate users &raquo;</a></p>
@@ -29,6 +30,9 @@
 	<p><a class="btn btn-info btn-lg" href="./requests" role="button">Occupant Requests &raquo;</a></p>
 	
 	
+=======
+	<p><a class="btn btn-info btn-lg" href="./ratings" role="button">Ratings &raquo;</a></p>
+>>>>>>> origin/master
     
     
     @endif

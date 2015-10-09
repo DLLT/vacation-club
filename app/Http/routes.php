@@ -29,9 +29,12 @@ Route::post('/create_let', 'LetController@createLet');
 
 Route::get('/about', 'AboutController@getHome');
 
+<<<<<<< HEAD
 
 Route::get('/requests', 'OccupantController@getHome');
 
+=======
+>>>>>>> origin/master
 Route::get('/user_houses', 'HouseController@getUserHouse');
 
 Route::post('/user_houses', 'LetController@getHome');
@@ -48,14 +51,18 @@ Route::post('/search_houses', 'HouseController@displayLetHouses');
 
 Route::get('/let/let_success', 'LetController@getSuccess');
 
+<<<<<<< HEAD
 Route::get('/occupant/occupant_success', 'LetController@getOccupantSuccess');
 
+=======
+>>>>>>> origin/master
 Route::get('/house/house_register/house_register_success', 'HouseController@getSuccess');
 
 
 Route::get('/contact', 'ContactController@getHome');
 
 
+<<<<<<< HEAD
 Route::get('/rate_houses', 'RatingController@getHomeHouses');
 Route::get('/rate_users', 'RatingController@getHomeUsers');
 
@@ -74,6 +81,16 @@ Route::post('/confirm_occupancy', 'OccupantController@confirmOccupancy');
 
 
 Route::get('/rating/house_rating_success', 'RatingController@getSuccess');
+=======
+Route::get('/ratings', 'RatingController@getHome');
+
+<<<<<<< HEAD
+
+Route::post('/create_occupancy', 'LetController@createOccupancy');
+
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
 //Route::get('house/house_details', 'HouseDetailsController@getHome');
 //Route::post('house/house_details', 'HouseDetailsController@displayDetails');
 
