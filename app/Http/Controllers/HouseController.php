@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Redirect;
 use DB;
 use App\User;
 use App\House;
+use App\Let;
+use Carbon\Carbon;
 
 
 class HouseController extends Controller {
@@ -16,14 +18,20 @@ class HouseController extends Controller {
     public function getHome(Request $request) 
     {
         $user = $request->session()->get('user');    
-        $houses = DB::table('house')->lists('image');
-
-        foreach ($houses as $house) {
-            $house = $house; 
-        }
-
-        return view('house', ['user' => $user, 'house' => $house]); 
-    
+        
+		if($user)
+		{
+		$houses = DB::select(
+			"SELECT * FROM house WHERE points < ? AND userId != ?",
+			[$user->points, $user->id]);
+		}
+		else
+		{
+			$houses = DB::select(
+			"SELECT * FROM house");
+		}
+      
+		return view('house', ['user' => $user], compact('houses'));
     }
 
 
@@ -71,5 +79,50 @@ class HouseController extends Controller {
             return "Failed";
         }
     }
-
+	
+	public function displayDetails(Request $request)
+	{
+		$user = $request->session()->get('user');
+		
+		$houses = DB::select("SELECT * FROM house WHERE id = ?",
+			[$request->id]);
+		return view('house_details', ['user' => $user], compact('houses'));
+		
+	}
+	
+	public function getUserHouse(Request $request)
+	{
+		        $user = $request->session()->get('user');
+			$houses = DB::select("SELECT * FROM house WHERE userId = ?",
+			[$user->id]);
+		return view('user_houses', ['user' => $user], compact('houses'));
+	}
+	
+	public function displayHouses(Request $request)
+	{
+		        $user = $request->session()->get('user');
+			$houses = DB::select("SELECT * FROM house WHERE userId = ?",
+			[$user->id]);
+		return view('user_houses', ['user' => $user], compact('houses'));
+	}
+	
+	public function displayLetHouses(Request $request)
+	{
+		
+		$user = $request->session()->get('user');
+			
+		
+		$mytime = Carbon::now();
+		$let = Let::where('updated_at', '=<', $mytime->toDateTimeString())->update(['available' => 'available']);
+	
+			$houses = DB::table('let')
+			->select('let.id', 'let.houseId', 'let.startdate', 'let.enddate', 'house.city', 'house.suburb', 'let.minrate')
+			->leftJoin('house', 'let.houseId', '=', 'house.id')
+			->where('house.userId', '!=', [$user->id], 'AND')
+			->where('let.available', '!=', 'pending')
+			->get();
+		
+		return view('view_houses', ['user' => $user], compact('houses'));	
+			
+		}
 }

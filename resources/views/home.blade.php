@@ -15,6 +15,24 @@
     </p> 
 
     <p><a class="btn btn-info btn-lg" href="./about" role="button">Learn more &raquo;</a></p>
+    
+    @if($user)
+
+    <p><a class="btn btn-info btn-lg" href="./user_houses" role="button">Your Houses &raquo;</a></p>
+    
+	
+	<p><a class="btn btn-info btn-lg" href="./rate_houses" role="button">Rate Houses &raquo;</a></p>
+	
+	<p><a class="btn btn-info btn-lg" href="./rate_users" role="button">Rate users &raquo;</a></p>
+	
+	
+	<p><a class="btn btn-info btn-lg" href="./requests" role="button">Occupant Requests &raquo;</a></p>
+	
+	
+    
+    
+    @endif
+    
 @endsection
 
 
@@ -27,7 +45,7 @@
 	
 
  
-<!-- Example row of columns -->
+<!-- Example row of columns 
 
 
        <div class="row">
@@ -41,12 +59,21 @@
           <p>Distance to the city:  {{$house->distcity }}
 		  Available Transport: {{$house->transport}} 
 		  Number of rooms: {{$house->numrooms}}</p>
-          <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-        </div>
+			
+          
+          <form method="post">
+		  
+		  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+		  <input type="hidden" name="id" value="{{$house->id}}">
+		  <input type="submit" value="View Details">
+		  </form>
+		 <!-- <a class="btn btn-info" href="./house/house_details" role="button">View details &raquo;</a>-->
+		 
+       <!-- </div>
         </div>
         </div>
 		@endforeach
-		</div>
+		</div>-->
 
 
 

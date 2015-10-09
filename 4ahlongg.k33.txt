@@ -1,0 +1,41 @@
+﻿Merge remote-tracking branch 'origin/master'
+
+Conflicts:
+	resources/views/home.blade.php
+	resources/views/house.blade.php
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   app/Http/Controllers/HomeController.php
+#	modified:   app/Http/Controllers/HouseController.php
+#	new file:   app/Http/Controllers/HouseDetailsController.php
+#	new file:   app/Http/Controllers/LetController.php
+#	modified:   app/Http/Controllers/LoginController.php
+#	new file:   app/Http/Controllers/RatingController.php
+#	modified:   app/Http/routes.php
+#	new file:   app/Let.php
+#	modified:   composer.json
+#	modified:   composer.lock
+#	modified:   config/app.php
+#	new file:   database/migrations/2015_09_30_075732_create_let_table.php
+#	modified:   resources/views/home.blade.php
+#	modified:   resources/views/house.blade.php
+#	new file:   resources/views/house_details.blade.php
+#	new file:   resources/views/let_register.blade.php
+#	new file:   resources/views/let_success.blade.php
+#	new file:   resources/views/user_houses.blade.php
+#	new file:   resources/views/view_houses.blade.php
+#
+
