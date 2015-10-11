@@ -14,14 +14,11 @@ class CreateHouseTable extends Migration
     {
     	Schema::create('house', function (Blueprint $table) {
                         $table->increments('id');
-<<<<<<< HEAD
                         // Foreign keyi
                         $table->string('name');
                         $table->string('description');
-=======
                         // Foreign key
-						$table->Integer('userId')->unsigned();
->>>>>>> 202a6ff9f45aa29d881ace50ff2fc06e1f9fea6f
+			$table->Integer('userId')->unsigned();
                         $table->string('city');
 			$table->string('suburb');
 			$table->string('distcity');

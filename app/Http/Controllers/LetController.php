@@ -9,10 +9,7 @@ use DB;
 use App\User;
 use App\House;
 use App\Let;
-<<<<<<< HEAD
 use App\Occupant;
-=======
->>>>>>> origin/master
 
 
 class LetController extends Controller {
@@ -33,10 +30,7 @@ public function createLet(Request $request)
 	$let->startDate = $request->startDate;
 	$let->endDate = $request->endDate;
 	$let->minRate = $request->minRate;
-<<<<<<< HEAD
 	$let->available = 'available';
-=======
->>>>>>> origin/master
 	
 	if ( $let->save() ) {     
                    
@@ -57,15 +51,11 @@ public function getSuccess(Request $request)
         return view('/let_success', ['user' => $user]);        
     }      
 	
-<<<<<<< HEAD
 public function createOccupancy(Request $request)
 {
-		$user = $request->session()->get('user'); 
-		//$lets =  DB::select("SELECT * FROM let WHERE letId = ?",
-		//	[$request->id]);
-		
-		$occupant = new Occupant;
-	
+    	$user = $request->session()->get('user'); 
+    	
+	$occupant = new Occupant;
 	$occupant->userId = $user->id;
 	$occupant->letId = $request->id;
 	
@@ -101,8 +91,7 @@ public function getOccupantSuccess(Request $request)
 			
 	
     } 
-=======
-<<<<<<< HEAD
+
 public function createOccupancy(Request $request)
 {
 		$user = $request->session()->get('user'); 
@@ -110,8 +99,5 @@ public function createOccupancy(Request $request)
 			[$request->id]);
 		
 }
-=======
->>>>>>> origin/master
->>>>>>> origin/master
 	
 }
