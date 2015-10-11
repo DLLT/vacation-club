@@ -15,8 +15,14 @@
  
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         
+        <label for="inputName" class="sr-only">City</label> 
+        <input type="text" name="name" id="inputName" class="form-control" placeholder="Name of House" autofocus>
+        <br>
+        <label for="inputDescription" class="sr-only">City</label> 
+        <input type="text" name="description" id="inputDescription" class="form-control" placeholder="Desciption of House" >
+        <br>
         <label for="inputCity" class="sr-only">City</label> 
-        <input type="text" name="city" id="inputCity" class="form-control" placeholder="City" autofocus>
+        <input type="text" name="city" id="inputCity" class="form-control" placeholder="City" >
         <br>
         <label for="inputSuburb" class="sr-only">Suburb</label> 
         <input type="text" name="suburb" id="inputSuburb" class="form-control" placeholder="Suburb" >

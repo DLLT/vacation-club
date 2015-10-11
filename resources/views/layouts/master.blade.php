@@ -51,12 +51,11 @@
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
             
               <div class="form-group">
-                <input type="text" placeholder="Email" class="form-control" name="email">
+                <input type="text" placeholder="Email" class="form-control" name="email" required>
               </div>
 
               <div class="form-group">
-                <input type="password" placeholder="Password" class="form-control" name="password">
-              </div>
+                <input type="password" placeholder="Password" class="form-control" name="password" required>e             </div>
             
               <button type="submit" value="submit" class="btn btn-info">Sign in</button>
             </form>

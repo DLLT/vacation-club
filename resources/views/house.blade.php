@@ -16,7 +16,7 @@
               <div class="thumbnail">
                   <img src="/img/01.jpg" alt="Sample Image">
                   <div class="caption">
-                  <h2>Summer Breeze</h2>
+                  <h2> {{ $name }} </h2>
                   <p>Enjoy the summer breeze.</p>
                   <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
               </div>
@@ -26,7 +26,7 @@
           <div class="thumbnail">
               <img src="/img/15.jpg" alt="Sample Image">
               <div class="caption">
-                  <h2>Laylow Lagoon</h2>
+                  <h2>{{ $name1 </h2>
                   <p>Lay low get loose.</p>
                   <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
              </div>
