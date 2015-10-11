@@ -23,6 +23,7 @@ class CreateUserTable extends Migration
             $table->string('suburb');
             $table->string('postcode');
             $table->string('phone');
+			$table->string('points');
             $table->timestamps();
             
         });

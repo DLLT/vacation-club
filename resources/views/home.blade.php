@@ -14,45 +14,71 @@
       
     </p> 
 
-    <p><a class="btn btn-info btn-lg" href="/about" role="button">Learn more &raquo;</a></p>
+    <p><a class="btn btn-info btn-lg" href="./about" role="button">Learn more &raquo;</a></p>
+    
+    @if($user)
+
+    <p><a class="btn btn-info btn-lg" href="./user_houses" role="button">Your Houses &raquo;</a></p>
+    
+	
+<<<<<<< HEAD
+	<p><a class="btn btn-info btn-lg" href="./rate_houses" role="button">Rate Houses &raquo;</a></p>
+	
+	<p><a class="btn btn-info btn-lg" href="./rate_users" role="button">Rate users &raquo;</a></p>
+	
+	
+	<p><a class="btn btn-info btn-lg" href="./requests" role="button">Occupant Requests &raquo;</a></p>
+	
+	
+=======
+	<p><a class="btn btn-info btn-lg" href="./ratings" role="button">Ratings &raquo;</a></p>
+>>>>>>> origin/master
+    
+    
+    @endif
+    
 @endsection
 
 
 <!-- put bottom content here -->
 @section('bottom_content')
 
-<!-- Example row of columns -->
-    <div class="row">
+
+
+
+	
+
+ 
+<!-- Example row of columns 
+
+
+       <div class="row">
+	   @foreach ($houses as $house)
+	   
         <div class="col-md-4">
-            <div class="thumbnail">
-                <img src="/img/01.jpg" alt="Sample Image">
-                <div class="caption">
-                    <h2>Summer Breeze</h2>
-                    <p>Enjoy the summer breeze.</p>
-                    <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-                </div>
-            </div>
+        <div class="thumbnail">
+        <img src="{{$house->image}}" alt="Sample Image">
+        <div class="caption">
+          <h2>{{$house->city }} {{$house->suburb}}</h2>
+          <p>Distance to the city:  {{$house->distcity }}
+		  Available Transport: {{$house->transport}} 
+		  Number of rooms: {{$house->numrooms}}</p>
+			
+          
+          <form method="post">
+		  
+		  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+		  <input type="hidden" name="id" value="{{$house->id}}">
+		  <input type="submit" value="View Details">
+		  </form>
+		 <!-- <a class="btn btn-info" href="./house/house_details" role="button">View details &raquo;</a>-->
+		 
+       <!-- </div>
         </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <img src="/img/15.jpg" alt="Sample Image">
-                <div class="caption">
-                    <h2>Laylow Lagoon</h2>
-                    <p>Lay low get loose.</p>
-                    <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-                </div>
-            </div>
         </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <img src="/img/22.jpg" alt="Sample Image">
-                <div class="caption">
-                    <h2>Oasis Heaven</h2>
-                    <p>Nice play with massive pool.</p>
-                    <p><a class="btn btn-info" href="#" role="button">View details &raquo;</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
+		@endforeach
+		</div>-->
+
+
 
 @endsection

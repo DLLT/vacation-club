@@ -22,8 +22,9 @@ class LoginController extends Controller {
 	    $email = $request->input('email');
 	    $password = $request->input('password');
 		
-            $result = DB::select(
-                "SELECT email, password FROM user WHERE email = ? AND password = ?",
+            
+                $result = DB::select(
+                "SELECT id, email, password, points FROM user WHERE email = ? AND password = ?",
                 [$email, $password]);
 
 	    if($result == [])
