@@ -51,6 +51,14 @@ class HouseController extends Controller {
         return view('/house_register_success', ['user' => $user]);
         
     }
+	
+	public function getFail(Request $request)
+    {
+        $user = $request->session()->get('user');
+		
+        return view('/house_register_fail', ['user' => $user]);
+        
+    }
 
     public function createHouse(Request $request)
     {
@@ -79,7 +87,7 @@ class HouseController extends Controller {
             return Redirect::to('house/house_register/house_register_success');
                 
         } else {
-            return "Failed";
+           return Redirect::to('house/house_register/house_register_fail');
         }
     }
 	
@@ -112,9 +120,18 @@ class HouseController extends Controller {
 	public function displayLetHouses(Request $request)
 	{
 		$user = $request->session()->get('user');
-		$houses = DB::table('house')
+		/**$houses = DB::table('house')
 			->join('let', 'let.houseId', '=', 'house.id')
-			->select('let.id', 'let.startDate', 'let.endDate', 'house.city', 'house.suburb')
+			->select('let.id', 'let.startDate', 'let.endDate', 'let.houseId', 'let.minrate', 'let.startdate', 'let.enddate','house.city', 'house.suburb')
+			->get();**/
+			
+			$houses = DB::table('let')
+			->select('let.id', 'let.houseId', 'let.startdate', 'let.enddate', 'house.city', 'house.suburb', 'let.minrate')
+			->leftJoin('house', 'let.houseId', '=', 'house.id')
+			->where('house.userId', '!=', [$user->id], 'AND')
+			->where('let.available', '=', 'available')
+			->whereBetween('let.startdate', [$request->startDate, $request->endDate])
+			//->orWhereBetween('let.enddate', [$request->endDate, $request->StartDate])
 			->get();
 			//->select('let.id', 'let.startDate', 'let.end)
 		

@@ -23,6 +23,9 @@
 	
 	
 	<p><a class="btn btn-info btn-lg" href="./ratings" role="button">Ratings &raquo;</a></p>
+	
+	
+	<p><a class="btn btn-info btn-lg" href="./requests" role="button">Requests &raquo;</a></p>
     
     
     @endif

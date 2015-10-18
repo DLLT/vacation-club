@@ -7,7 +7,7 @@
 @section('top_content')
     <p>The Let been registered successfully.</p>
            <a href="../">Procced to Home Page here</a>               
-        </li>
+    </li>
     </ul>
 
 

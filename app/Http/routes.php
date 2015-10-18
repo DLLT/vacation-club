@@ -50,12 +50,13 @@ Route::get('/let/let_success', 'LetController@getSuccess');
 Route::get('/occupant/occupant_success', 'LetController@getOccupantSuccess');
 
 Route::get('/house/house_register/house_register_success', 'HouseController@getSuccess');
+Route::get('/house/house_register/house_register_faile', 'HouseController@getFail');
 
 Route::get('/contact', 'ContactController@getHome');
 
-Route::get('/rate_houses', 'RatingController@getHomeHouses');
+//Route::get('/rate_houses', 'RatingController@getHomeHouses');
 
-Route::get('/rate_users', 'RatingController@getHomeUsers');
+//Route::get('/rate_users', 'RatingController@getHomeUsers');
 
 Route::post('/rate_house', 'RatingController@getRate');
 
@@ -69,7 +70,7 @@ Route::post('/create_occupancy', 'LetController@createOccupancy');
 
 Route::post('/confirm_occupancy', 'OccupantController@confirmOccupancy');
 
-Route::get('/rating/house_rating_success', 'RatingController@getSuccess');
+Route::get('/rating/rating_success', 'RatingController@getSuccess');
 
 Route::get('/ratings', 'RatingController@getHome');
 

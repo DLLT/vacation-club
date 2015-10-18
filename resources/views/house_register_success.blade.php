@@ -6,6 +6,7 @@
 
 @section('top_content')
     <p>You have successfuly Registered your house.</p>
+	<a href="../">Procced to Home Page here</a> 
 
 
 @endsection

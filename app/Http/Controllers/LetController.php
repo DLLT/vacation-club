@@ -92,12 +92,12 @@ public function getOccupantSuccess(Request $request)
 	
     } 
 
-public function createOccupancy(Request $request)
+/**public function createOccupancy(Request $request)
 {
 		$user = $request->session()->get('user'); 
 		$lets =  DB::select("SELECT * FROM let WHERE id = ?",
 			[$request->id]);
 		
-}
+}**/
 	
 }

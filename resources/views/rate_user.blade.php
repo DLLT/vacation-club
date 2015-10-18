@@ -18,6 +18,8 @@
 		  <input type="hidden" name="_token" value="{{ csrf_token() }}">
 		   <input type="hidden" name="id" value="{{$occupant->id}}">
 		   
+		   <input type="hidden" name="userId" value="{{$occupant->userId}}">
+		   
 		  City:<input type="text" name="email" id="inputEmail"value="{{$occupant->email}}" readonly> <br />
 		  Suburb:<input type="text" name="firstname" id="inputfirstname" value="{{$occupant->firstname}}" readonly><br />
 		 Distance to city: <input type="text" name="lastname" id="inputLastname" value="{{$occupant->lastname}}" readonly><br />

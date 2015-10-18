@@ -16,7 +16,9 @@
 		  <form method="post" action="./create_rating">
 		  
 		  <input type="hidden" name="_token" value="{{ csrf_token() }}">
-		   <input type="hidden" name="id" value="{{$occupant->id}}">
+		    <input type="hidden" name="id" value="{{$occupant->id}}">
+		   
+		   <input type="hidden" name="houseId" value="{{$occupant->houseId}}">
 		   
 		  City:<input type="text" name="city" id="inputCity"value="{{$occupant->city}}" readonly> <br />
 		  Suburb:<input type="text" name="suburb" id="inputSuburb" value="{{$occupant->suburb}}" readonly><br />

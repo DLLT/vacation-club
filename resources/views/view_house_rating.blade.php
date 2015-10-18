@@ -37,6 +37,33 @@
         </div>
         </div>
 		
+	
+		@endforeach
+		
+<h2>User Ratings</h2>
+		 @foreach ($renters as $renter)
+	   
+	   
+	   <div class="col-md-4">
+        <div class="thumbnail">
+        
+        <div class="caption">
+          <h2>{{$renter->firstname }} {{$renter->lastname}}</h2>
+          <p>email address: {{$renter->email }} 
+		   occupant id : {{$renter->id }}
+		   user id: {{$renter->userId}}</p>
+		   
+		   <form method="post" action="./rate_user">
+		  
+		  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+		  <input type="hidden" name="id" value="{{$renter->id}}">
+		  <input type="hidden" name="userId" value="{{$renter->userId}}">
+		  <input type="submit" value="Rate user">
+		  </form>
+		  </div>
+        </div>
+        </div>
+		
 	    
 			
 			
