@@ -13,23 +13,23 @@ class CreateRatingTable extends Migration
     public function up()
     {
          Schema::create('rating', function (Blueprint $table) {
-		     $table->increments('id');
+		        $table->increments('id');
                         // Foreign key
-						$table->Integer('houseId')->nullable()->unsigned();
-						$table->Integer('userId')->nullable()->unsigned();
-						$table->Integer('numRate');
+	        	$table->Integer('houseId')->nullable()->unsigned();
+			$table->Integer('userId')->nullable()->unsigned();
+			$table->Integer('numRate');
                         $table->timestamps();
 						});
 						
 			Schema::table('rating', function ($table) {
-			$table->foreign('userId')
-				->references('userId')->on('occupant')
+			    $table->foreign('userId')
+		        	->references('userId')->on('occupant')
 				->onDelete('cascade')
-			->onUpdate('cascade');
+			        ->onUpdate('cascade');
 			});
 				
-				Schema::table('rating', function ($table) {
-			$table->foreign('letId')
+			Schema::table('rating', function ($table) {
+			    $table->foreign('letId')
 				->references('id')->on('occupant')
 				->onDelete('cascade')
 				->onUpdate('cascade');

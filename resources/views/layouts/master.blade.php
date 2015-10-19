@@ -33,7 +33,7 @@
           </button>
           <a class="navbar-brand" href="./">Vacation House Exchange Club</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse">
           <!--check if user logged in and display bar accordingly -->
           @if ( $user )
             <div class="navbar-header navbar-right" style="color: white">
@@ -75,7 +75,6 @@
     <!-- Content -->
     <div class="container"> 
     <div class="jumbotron myBackground">
-    <h1 class="whitney">
 
     <div class="container" style="padding-top: 50px;">
 

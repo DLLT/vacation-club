@@ -30,7 +30,7 @@ class RatingController extends Controller
 	$occupants = DB::table('house')
 	    ->select('occupant.id',  'let.houseId','house.city', 'house.suburb', 'house.distcity', 'house.transport', 'house.numrooms', 'house.userId', 'house.aircon', 'house.heating', 'house.swimmingpool')
 	    ->leftJoin('let', 'house.id', '=', 'let.houseId')
-		->leftJoin('occupant', 'let.id', '=', 'occupant.letId')
+		->leftJoin('occupant', 'let.letId', '=', 'occupant.letId')
 		->where('house.id', '=', [$request->houseId], 'AND')
 		->where('let.available', '=', 'renting')
 	    ->get();
@@ -104,7 +104,7 @@ class RatingController extends Controller
 		
 		$occupants = DB::table('occupant')
 	    ->select('occupant.id', 'house.city', 'house.suburb', 'house.distcity', 'house.transport', 'house.numrooms', 'let.houseId', 'house.userId')
-	    ->leftJoin('let', 'occupant.letId', '=', 'let.id')
+	    ->leftJoin('let', 'occupant.letId', '=', 'let.letId')
 	    ->leftJoin('house', 'let.houseId', '=', 'house.id')
 	    ->where('occupant.userId', '=', [$user->id], 'AND')
 	    ->where('let.available', '=', 'renting', 'AND')
@@ -112,7 +112,7 @@ class RatingController extends Controller
 		
 		$renters = DB::table('occupant')
 	    ->select('occupant.id', 'occupant.userId', 'user.email', 'user.firstname', 'user.lastname')
-	    ->leftJoin('let', 'occupant.letId', '=','let.id')
+	    ->leftJoin('let', 'occupant.letId', '=','let.letId')
 	    ->leftJoin('house', 'let.houseId', '=', 'house.id')
 	    ->leftJoin('user', 'occupant.userId', '=', 'user.id')
 	    ->where('house.userId', '=', [$user->id], 'AND')

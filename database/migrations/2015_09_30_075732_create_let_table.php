@@ -15,7 +15,6 @@ class CreateLetTable extends Migration
         Schema::create('let', function (Blueprint $table) {
             
                         $table->increments('letId');
-                        $table->increments('id');
                         // Foreign key
     			$table->Integer('houseId')->unsigned();
                         $table->string('startdate');

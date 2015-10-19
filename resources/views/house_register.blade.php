@@ -52,7 +52,7 @@
         <input type="text" name="discount" id="inputDiscount" class="form-control" placeholder="Discount for longstay: per week" >
         <br>
         <label for="inputImage" class="sr-only">Image</label> 
-        <input type="file" name="image" id="inputImage" class="form-control" placeholder="Image of house" >
+        <input type="text" name="image" id="inputImage" class="form-control" placeholder="Image of house" >
         <br>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
     </form>

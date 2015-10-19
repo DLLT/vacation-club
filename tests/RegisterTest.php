@@ -11,8 +11,17 @@ class RegisterTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testCanRegisterUser()
     {
-        $this->assertTrue(true);
+        $this->visit('/')
+            ->type('test@email', 'email')
+            ->type('password','password')
+            ->press('Register')
+            ->seePageIs('/register/register_success');
+    }
+
+    public function testCanRegisterHouse()
+    {
+
     }
 }

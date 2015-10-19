@@ -21,7 +21,7 @@ class OccupantController extends Controller {
 		
 		$occupants = DB::table('occupant')
 			->select('occupant.id', 'occupant.created_at', 'occupant.letId', 'let.houseId', 'house.userId')
-			->leftJoin('let', 'occupant.letId', '=', 'let.id')
+			->leftJoin('let', 'occupant.letId', '=', 'let.letId')
 			->leftJoin('house', 'house.id', '=', 'let.houseId')
 			->where('house.userId', '=', [$user->id])
 			->get();
